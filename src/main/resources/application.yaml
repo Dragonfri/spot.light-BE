@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://49.50.175.53:3306/spotlight
+    username: mydb
+    password: 1234
+  servlet:
+    multipart:
+      maxFileSize: 10GB
+      maxRequestSize: 100GB
+      location: /root/TeamProject-main/demo/img/

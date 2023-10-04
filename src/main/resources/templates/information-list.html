@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <title>Grids & Circles</title>
+</head>
+<body class="container-fluid">
+<h1>Grids & Circles</h1>
+<h2>Information Management</h2>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a th:href="@{/new-information}" class="btn btn-primary me-md-2" type="button">Add Information</a>
+</div>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Image</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="information: ${informations}" th:object="${information}">
+    <td><img th:src="|/img/*{savedName}|" alt=""/></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
