@@ -41,8 +41,6 @@ public class UploadRestController {
     String savedPath = fileDir + savedName;
     String loadPath = "http://49.50.175.53:8080" + "/img/" + savedName;
 
-
-
     files.transferTo(new File(savedName));
 
     String pdsLat = "";
